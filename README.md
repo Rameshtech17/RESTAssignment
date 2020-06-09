@@ -13,3 +13,5 @@ REST API Assignment
 ![Screenshot from 2020-06-05 21-55-57](https://user-images.githubusercontent.com/55201891/83903152-43e33080-a77b-11ea-81bf-4e87e7b9bf3d.png)
 ![Screenshot from 2020-06-05 21-56-19](https://user-images.githubusercontent.com/55201891/83903157-45145d80-a77b-11ea-9a8b-0bcb2cc6ca9d.png)
 ![Screenshot from 2020-06-05 21-56-37](https://user-images.githubusercontent.com/55201891/83903161-46458a80-a77b-11ea-80e8-80ac657c78fb.png)
+![Screenshot from 2020-06-09 18-37-51](https://user-images.githubusercontent.com/55201891/84151215-a771a480-aa80-11ea-86c8-b92544977b5b.png)
+![Screenshot from 2020-06-09 18-39-08](https://user-images.githubusercontent.com/55201891/84151218-a8a2d180-aa80-11ea-8824-8326b9c9a1ff.png)

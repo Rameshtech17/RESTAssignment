@@ -4,18 +4,16 @@ from rest_framework import status, generics
 from rest_framework.views import APIView
 from .models import School, Class, Teacher, StudentsList, Subject
 from .serializers import SchoolSerializer, ClassSerializer, TeacherSerializer, StudentListSerializer, SubjectSerializer,TeachersSerializer
-from django.db import connection
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.authentication import BasicAuthentication, SessionAuthentication, TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
-
-def joindata(request):
-    cursor = connection.cursor()
-    cursor.execute("select StudentsList.FirstName ,StudentsList.LastName, Class. ")
 
 
 class SchoolAPIView(APIView):
-
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
     def get(self, request):
         school = School.objects.all()
         serializer = SchoolSerializer(school, many=True)
@@ -48,6 +46,9 @@ class SearchAPIView(generics.ListAPIView):
 
 class ClassAPIView(APIView):
 
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request):
         Clas = Class.objects.all()
         serializer = ClassSerializer(Clas, many=True)
@@ -63,6 +64,9 @@ class ClassAPIView(APIView):
 
 
 class TeacherAPIView(APIView):
+
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         teacher = Teacher.objects.all()
@@ -80,6 +84,9 @@ class TeacherAPIView(APIView):
 
 class StudentListAPIView(APIView):
 
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
+
     def get(self, request):
         student = StudentsList.objects.all()
         serializer = StudentListSerializer(student, many=True)
@@ -95,6 +102,9 @@ class StudentListAPIView(APIView):
 
 
 class SubjectAPIView(APIView):
+
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         subject = Subject.objects.all()
